@@ -4,14 +4,21 @@ const app = express();
 const _PORT = process.env.PORT || 8080;
 //
 
-const { token, default_prefix } = require("./config.json");
-const { config } = require("dotenv");
-const Discord = require("discord.js"); 
+const {
+  token,
+  default_prefix
+} = require("./config.json");
+const {
+  config
+} = require("dotenv");
+const Discord = require("discord.js");
 const bot = new Discord.Client({
-  disableEveryone: true 
+  disableEveryone: true
 });
 const db = require("quick.db");
-const { addexp } = require("./handlers/xp.js");
+const {
+  addexp
+} = require("./handlers/xp.js");
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
@@ -27,7 +34,7 @@ bot.on("ready", () => {
     "Saekyo",
     `${bot.guilds.cache.size} servers`,
     `${bot.channels.cache.size} channels`,
-    `${bot.users.cache.size} users`, 
+    `${bot.users.cache.size} users`,
     `Made with 💙 by Saekyo`
   ];
   setInterval(() => {
@@ -91,11 +98,16 @@ bot.on("message", async message => {
       const embed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setAuthor(`${memafk.username} is currently AFK`)
-        .setThumbnail(memafk.displayAvatarURL({ format: "png", dynamic: true }))
+        .setThumbnail(memafk.displayAvatarURL({
+          format: "png",
+          dynamic: true
+        }))
         .addField(`Reason`, ` ${status}`)
         .setFooter("AFK since ")
         .setTimestamp();
-      message.channel.send(embed).then(i => i.delete({ timeout: 5000 }));
+      message.channel.send(embed).then(i => i.delete({
+        timeout: 5000
+      }));
     }
   }
 
@@ -104,34 +116,36 @@ bot.on("message", async message => {
     const embed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(`**${message.author.tag}** is no longer AFK.`);
-    message.channel.send(embed).then(i => i.delete({ timeout: 5000 }));
+    message.channel.send(embed).then(i => i.delete({
+      timeout: 5000
+    }));
     afk.delete(message.author.id);
   }
 
   //================================================RPLM VERIFY================================================
-  if(message.content === `/verify`){
-    if (message.channel.id !== "775355622794592277"){
+  if (message.content === `/verify`) {
+    if (message.channel.id !== "775355622794592277") {
       return;
     }
     await message.delete();
     await message.member.roles.add("774940086198337536");
   }
-    
-    //================================================REACTION ROLE============================================
-    if(message.content === `/rr`){
-      let embed = new Discord.MessageEmbed()
-              .setTitle("RPLM Self Roles")
-              .setDescription("1. 🔴 - Red \n 2. 🔵 - Blue")
-              .setColor("RED");
-          let msgEmbed = await message.channel.send(embed);
-          msgEmbed.react("🔵");
-          msgEmbed.react("🔴");
-      }
+
+  //================================================REACTION ROLE============================================
+  if (message.content === `/rr`) {
+    let embed = new Discord.MessageEmbed()
+      .setTitle("RPLM Self Roles")
+      .setDescription("1. 🔴 - Red \n 2. 🔵 - Blue")
+      .setColor("RED");
+    let msgEmbed = await message.channel.send(embed);
+    msgEmbed.react("🔵");
+    msgEmbed.react("🔴");
+  }
 
   //==================================================END======================================================
-  
-//==============================================================================
-  
+
+  //==============================================================================
+
   if (!message.guild) return;
   let prefix = db.get(`prefix_${message.guild.id}`);
   if (prefix === null) prefix = default_prefix;
@@ -164,7 +178,7 @@ bot.on("message", async message => {
   // If a command is finally found, run the command
   if (command) command.run(bot, message, args);
 
-   return addexp(message);
+  return addexp(message);
 });
 
 //==============================================================================
@@ -175,9 +189,9 @@ bot.on("message", async message => {
 //=========================================BOT NOTIF JOIN SERVER=========================================
 bot.on("guildCreate", guild => {
   const channelId = "769433563795161088";
-  const channel = bot.channels.cache.get(channelId); 
-  const sowner = guild.owner.user; 
-  if (!channel) return; 
+  const channel = bot.channels.cache.get(channelId);
+  const sowner = guild.owner.user;
+  if (!channel) return;
   const embed = new Discord.MessageEmbed()
     .setTitle("I Joined A Guild!")
     .setDescription(
@@ -192,9 +206,9 @@ bot.on("guildCreate", guild => {
 //=========================================BOT NOTIF LEFT SERVER=========================================
 bot.on("guildDelete", guild => {
   const channelId = "769433563795161088";
-  const channel = bot.channels.cache.get(channelId); 
-  const sowner = guild.owner.user; 
-  if (!channel) return; 
+  const channel = bot.channels.cache.get(channelId);
+  const sowner = guild.owner.user;
+  if (!channel) return;
   const embed = new Discord.MessageEmbed()
     .setTitle("I Left A Guild!")
     .setDescription(
@@ -212,7 +226,7 @@ bot.on("guildMemberAdd", async member => {
   if (chx === null) {
     return;
   }
-  
+
   bot.channels.cache.get(chx).send(`.      　。　　　　•　    　ﾟ　　。
 　　.　　　.　　　  　　.　　　　　。　　   。　.
  　.　　      。　        ඞ   。　    .    •
@@ -228,7 +242,7 @@ bot.on("guildMemberRemove", async member => {
   if (chx === null) {
     return;
   }
-  
+
   bot.channels.cache.get(chx).send(`.      　。　　　　•　    　ﾟ　　。
 　　.　　　.　　　  　　.　　　　　。　　   。　.
  　.　　      。　        ඞ   。　    .    •
@@ -240,38 +254,38 @@ bot.on("guildMemberRemove", async member => {
 
 //=========================================Reaction roles ADD=========================================
 bot.on("messageReactionAdd", async (reaction, user) => {
-    if (reaction.message.partial) await reaction.message.fetch();
-    if (reaction.partial) await reaction.fetch();
+  if (reaction.message.partial) await reaction.message.fetch();
+  if (reaction.partial) await reaction.fetch();
 
-    if (user.bot) return;
-    if (!reaction.message.guild) return;
+  if (user.bot) return;
+  if (!reaction.message.guild) return;
 
-    if (reaction.message.channel.id === '776065537133510677') {
-        if (reaction.emoji.name === '🔵') {
-            await reaction.message.guild.members.cache.get(user.id).roles.add('776093882160250922');
-        }
-        if (reaction.emoji.name === '🔴') {
-            await reaction.message.guild.members.cache.get(user.id).roles.add('776093844441399326');
-        }
+  if (reaction.message.channel.id === '776065537133510677') {
+    if (reaction.emoji.name === '🔵') {
+      await reaction.message.guild.members.cache.get(user.id).roles.add('776093882160250922');
     }
+    if (reaction.emoji.name === '🔴') {
+      await reaction.message.guild.members.cache.get(user.id).roles.add('776093844441399326');
+    }
+  }
 });
 
 //=========================================Reaction Roles Remove=========================================
 bot.on("messageReactionRemove", async (reaction, user) => {
-    if (reaction.message.partial) await reaction.message.fetch();
-    if (reaction.partial) await reaction.fetch();
+  if (reaction.message.partial) await reaction.message.fetch();
+  if (reaction.partial) await reaction.fetch();
 
-    if (user.bot) return;
-    if (!reaction.message.guild) return;
+  if (user.bot) return;
+  if (!reaction.message.guild) return;
 
-    if (reaction.message.channel.id === '776065537133510677') {
-        if (reaction.emoji.name === '🔵') {
-            await reaction.message.guild.members.cache.get(user.id).roles.remove('776093882160250922');
-        }
-        if (reaction.emoji.name === '🔴') {
-            await reaction.message.guild.members.cache.get(user.id).roles.remove('776093844441399326');
-        }
+  if (reaction.message.channel.id === '776065537133510677') {
+    if (reaction.emoji.name === '🔵') {
+      await reaction.message.guild.members.cache.get(user.id).roles.remove('776093882160250922');
     }
+    if (reaction.emoji.name === '🔴') {
+      await reaction.message.guild.members.cache.get(user.id).roles.remove('776093844441399326');
+    }
+  }
 });
 
 
