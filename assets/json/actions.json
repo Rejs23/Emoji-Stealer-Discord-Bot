@@ -1,5 +1,5 @@
 {
-  "danceP" :[
+  "danceP": [
     "https://media.discordapp.net/attachments/739051913651159071/744284966770311288/tenor_22.gif?width=467&height=434",
     "https://media.discordapp.net/attachments/739051913651159071/744284967240073276/04c39f437de3bda67d2dc35bbb563d88.gif?width=399&height=434",
     "https://media.discordapp.net/attachments/739051913651159071/744284967630143529/0be4033d4b361127f4990add85864c5e.gif",
@@ -15,10 +15,10 @@
     "https://media.discordapp.net/attachments/739051913651159071/744285321344188566/1494066709_Anime_Dance.gif",
     "https://media.discordapp.net/attachments/739051913651159071/744285323634147468/tenor_24.gif?width=378&height=434",
     "https://media.discordapp.net/attachments/739051913651159071/744285324322144396/BitesizedQuaintHamadryas-max-1mb.gif"
-    
+
   ],
-  
-  "singP" :[
+
+  "singP": [
     "https://media.discordapp.net/attachments/739051913651159071/744282071639523408/ed86831f884944ed641eabaed353769720628e35_hq.gif",
     "https://media.discordapp.net/attachments/739051913651159071/744282071412768798/images_29.jpeg",
     "https://media.discordapp.net/attachments/739051913651159071/744282071085875220/479c8a26eaa887287b6a3275a5a0cdbb.gif",
@@ -29,10 +29,10 @@
     "https://media.discordapp.net/attachments/739051913651159071/744282038487744552/1499135715_tumblr_o2yvd50EUj1ugd9zgo1_500.gif?width=444&height=434",
     "https://media.discordapp.net/attachments/739051913651159071/744282037950611489/954a891ca709a34a-anime-behind-the-mic-anime-amino.gif",
     "https://media.discordapp.net/attachments/739051913651159071/744282037439168522/tumblr_8a5528c9662bb5494262b7a1df9aada8_2eda3c73_500.gif"
-    
+
   ],
-  
-  "smileP" :[
+
+  "smileP": [
     "https://media.discordapp.net/attachments/725388920803557450/744273800991998046/tenor_19.gif",
     "https://media.discordapp.net/attachments/725388920803557450/744273801642246154/tumblr_0e5ece4bd40e6f7a2c20c3b9d73b47ac_88ce2fa7_400.gif",
     "https://media.discordapp.net/attachments/725388920803557450/744273802061414459/giphy_6.gif",
@@ -49,40 +49,40 @@
     "https://media.discordapp.net/attachments/725388920803557450/744273993724330084/1efR.gif",
     "https://media.discordapp.net/attachments/725388920803557450/744273994043228250/tenor_21.gif",
     "https://media.discordapp.net/attachments/725388920803557450/744273994454270005/MagnificentWillingLabradorretriever-size_restricted.gif"
-             
-    
+
+
   ],
-  
-  "drinkP" :["https://media.discordapp.net/attachments/739051913651159071/744263397855723600/tumblr_mtymn2RJdm1s515j6o1_250.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263398279086090/Omake_Gif_Anime_-_Ao_no_Exorcist_-_Kyoto_Fujouou-hen_-_Episode_2_-_Shura_Drinks_Juice.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263398979797144/unnamed_5.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263399797555310/db8b3b143e537347cfad3cad963fb4909f26cae0_hq.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263400108064768/images_28.jpeg",
-             "https://media.discordapp.net/attachments/739051913651159071/744263400326037621/SphericalAjarCockerspaniel-max-1mb.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263532652003399/137430.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263533172359208/tenor_18.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263533537263767/db316ad853b1b27e6a81b18b7c3a6021.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263533897842788/9f5a6b93bda71444234b0d740d465bc059837419_hq.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263534275461220/tenor_17.gif",
-             "https://media.discordapp.net/attachments/739051913651159071/744263534627520612/tenor_16.gif?width=424&height=434"
-    
+
+  "drinkP": ["https://media.discordapp.net/attachments/739051913651159071/744263397855723600/tumblr_mtymn2RJdm1s515j6o1_250.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263398279086090/Omake_Gif_Anime_-_Ao_no_Exorcist_-_Kyoto_Fujouou-hen_-_Episode_2_-_Shura_Drinks_Juice.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263398979797144/unnamed_5.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263399797555310/db8b3b143e537347cfad3cad963fb4909f26cae0_hq.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263400108064768/images_28.jpeg",
+    "https://media.discordapp.net/attachments/739051913651159071/744263400326037621/SphericalAjarCockerspaniel-max-1mb.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263532652003399/137430.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263533172359208/tenor_18.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263533537263767/db316ad853b1b27e6a81b18b7c3a6021.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263533897842788/9f5a6b93bda71444234b0d740d465bc059837419_hq.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263534275461220/tenor_17.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744263534627520612/tenor_16.gif?width=424&height=434"
+
   ],
-  
-  "eatP" :["https://media.discordapp.net/attachments/739051913651159071/744259238599065661/tenor_15.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259238800392353/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259239454965830/tenor_14.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259239840710686/tenor_13.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259240075722752/YsqU.gif?width=773&height=434",
-           "https://media.discordapp.net/attachments/739051913651159071/744259240402616379/62a643017269693428d807ed646a0a0807ce1bcf_hq.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259353762201730/tenor_12.gif?format=png",
-           "https://media.discordapp.net/attachments/739051913651159071/744259354387284010/tenor_11.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259354684817498/tenor_10.gif?width=288&height=433",
-           "https://media.discordapp.net/attachments/739051913651159071/744259355070955530/tenor_9.gif",
-           "https://media.discordapp.net/attachments/739051913651159071/744259355473346671/tenor_8.gif?width=434&height=434"
-    
+
+  "eatP": ["https://media.discordapp.net/attachments/739051913651159071/744259238599065661/tenor_15.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259238800392353/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259239454965830/tenor_14.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259239840710686/tenor_13.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259240075722752/YsqU.gif?width=773&height=434",
+    "https://media.discordapp.net/attachments/739051913651159071/744259240402616379/62a643017269693428d807ed646a0a0807ce1bcf_hq.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259353762201730/tenor_12.gif?format=png",
+    "https://media.discordapp.net/attachments/739051913651159071/744259354387284010/tenor_11.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259354684817498/tenor_10.gif?width=288&height=433",
+    "https://media.discordapp.net/attachments/739051913651159071/744259355070955530/tenor_9.gif",
+    "https://media.discordapp.net/attachments/739051913651159071/744259355473346671/tenor_8.gif?width=434&height=434"
+
   ],
-  
-  "Lick" :[
+
+  "Lick": [
     "https://media.discordapp.net/attachments/739051913651159071/739782372894965851/unnamed_4.gif",
     "https://media.discordapp.net/attachments/739051913651159071/739782381204144158/tenor_3.gif",
     "https://media.discordapp.net/attachments/739051913651159071/739782403316252672/745b064cb3c555f37e741752b4e2d0ca1423247986_full.gif",
@@ -92,7 +92,7 @@
     "https://media.discordapp.net/attachments/739051913651159071/739782512976330832/tenor_1.gif"
   ],
 
-  "selfSlapP" :[
+  "selfSlapP": [
     "https://media.discordapp.net/attachments/739051913651159071/739052074536534106/self-slap-gif-6.gif",
     "https://media.discordapp.net/attachments/739051913651159071/739052074905370634/tenor.gif",
     "https://media.discordapp.net/attachments/739051913651159071/739052075341709392/unnamed_3.gif",
@@ -100,7 +100,7 @@
     "https://media.discordapp.net/attachments/739051913651159071/739052076121849906/unnamed_1.gif",
     "https://media.discordapp.net/attachments/739051913651159071/739052076834881637/unnamed.gif"
   ],
-  
+
   "handP": [
     "http://i2.kym-cdn.com/photos/images/newsfeed/000/932/422/4ad.gif",
     "http://i1.kym-cdn.com/photos/images/newsfeed/000/932/364/770.gif",
@@ -378,7 +378,7 @@
     "https://s-media-cache-ak0.pinimg.com/originals/85/e8/0d/85e80de11d761c931553ce04b4223ce7.gif",
     "http://24.media.tumblr.com/002a9723796cfa232522ddab80943143/tumblr_mnqlxmWh5G1s9nzk7o1_500.gif",
     "https://i.warosu.org/data/cgl/img/0085/60/1440092303236.gif"
-    ],
+  ],
 
   "cryP": [
     "https://media.giphy.com/media/ROF8OQvDmxytW/giphy.gif",
