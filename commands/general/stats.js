@@ -17,13 +17,12 @@ module.exports = {
     const server = bot.guilds.cache.size;
     const channel = bot.channels.cache.size;
     const user = bot.users.cache.size;
-
-    //   const memory = bot.Util.bytesToSize(process.memoryUsage().heapUsed);
-    //   const total = bot.Util.bytesToSize(require("os").totalmem); | 
+    const namabot = bot.user.username;
     const ping = bot.ws.ping;
+    const avatar = bot.user.displayAvatarURL();
 
     const statsembed = new discord.MessageEmbed()
-      .setAuthor(`Kaguya stats`, bot.user.displayAvatarURL())
+      .setAuthor(namabot, avatar)
       .addFields({
         name: `Uptime`,
         value: "```" + uptime + "```",

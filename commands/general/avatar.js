@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
-
+const {colorE} = require("././config.json");
 module.exports = {
   name: "avatar",
   category: "🌏 | General",
   usage: "avatar <mention user>",
   aliases: ["av"],
   description: "Show user avatar",
-  run: async (bot, message, args) => {
+  run: async (bot, message, args,) => {
     let userArray = message.content.split(" ");
     let userArgs = userArray.slice(1);
     let member =
@@ -18,17 +18,17 @@ module.exports = {
           x.user.username === userArgs[0]
       ) ||
       message.member;
+    let tag = member.user.tag;
+    let av = member.user.displayAvatarURL({ format: "png", dynamic: true })
+    let avGede = member.user.displayAvatarURL({ format: "png", dynamic: true, size: 256 })
 
     const avatarEmbed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setTitle("Avatar")
       .setFooter(`Thanks for using ${bot.user.username}`)
-      .setAuthor(
-        member.user.tag,
-        member.user.displayAvatarURL({ format: "png", dynamic: true })
-      )
-      .setImage(member.user.displayAvatarURL({ format: "png", dynamic: true, size: 256 }));
+      .setAuthor(tag, av)
+      .setImage(avGede);
     message.channel.send(avatarEmbed);
-    message.delete({ timeout: 4000 }); //angkanya bebas
+    message.delete({ timeout: 15000 }); //angkanya bebas
   }
 };

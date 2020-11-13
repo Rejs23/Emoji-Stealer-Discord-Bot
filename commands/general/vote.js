@@ -10,7 +10,7 @@ module.exports = {
       .setColor("RANDOM")
       .setTitle("Vote Kaguya")
       .addField("Every 10 hours", `[Astro](https://botlists.com/bot/725432896533299200/vote)`)
-    .setFooter(`Thanks for your support!`)
+      .setFooter(`Thanks for your support!`)
     message.channel.send(botEmbed);
     message.delete({ timeout: 4000 }); //angkanya bebas
   }

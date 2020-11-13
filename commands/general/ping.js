@@ -5,19 +5,19 @@ module.exports = {
   category: "🌏 | General",
   description: "Check bot ping",
   run: async (bot, message, args) => {
-    const m = await message.channel.send("Pinging...");
-    m.edit(
+    let pingWs = Math.round(bot.ws.ping) 
+    let pingLa = m.createdTimestamp - message.createdTimestamp
+    const m = await message.channel.send("Ping Pong...");
+    await m.edit(
       `🏓Latency is ` +
         "`" +
-        `${m.createdTimestamp - message.createdTimestamp}ms` +
+        `${pingLa}ms` +
         "`" +
         ` | API Latency is ` +
         "`" +
-        `${Math.round(bot.ws.ping)}ms` +
+        `${pingWs}ms` +
         "`" +
         ``
     );
   }
-  // message.channel.send("🏓 Pong! `" + bot.ws.ping + "ms`");
-  //message.delete({ timeout: 4000 }); //angkanya bebas
 };

@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-//const botconfig = require("../config.json");
+// ? const botconfig = require("../config.json");
 const db = require("quick.db");
 
 module.exports = {
@@ -16,8 +16,8 @@ module.exports = {
       message.author || message.member || message.mentions.members.first();
 
     if (!afk) {
-      //   message.member.setNickname(`[AFK] ${message.author.username}`);
-      message.member.setNickname(`[AFK] ${message.member.displayName}`);
+      //? message.member.setNickname(`[AFK] ${message.author.username}`);
+      //! message.member.setNickname(`[AFK] ${message.member.displayName}`);
       embed.setAuthor(`${message.author.username} is now AFK`);
       embed.setThumbnail(
         message.author.displayAvatarURL({ format: "png", dynamic: true })
@@ -27,7 +27,7 @@ module.exports = {
       embed.setTimestamp();
       status.set(message.author.id, args.join(" ") || `AFK`);
     } else {
-      message.member.setNickname(afterAfk);
+      //! message.member.setNickname(afterAfk);
       embed.setDescription("You are no longer AFK.");
       status.delete(message.author.id);
     }

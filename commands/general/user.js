@@ -24,62 +24,6 @@ module.exports = {
     //OPTIONS FOR STATUS
     //  if (user.presence.status === "dnd")user.presence.status = "Do Not Disturb";
     //if (user.presence.status === "online") user.presence.status = "Online";
-    var permissions = [];
-    var acknowledgements = "None";
-
-    if (message.member.hasPermission("KICK_MEMBERS")) {
-      permissions.push("Kick Members");
-    }
-
-    if (message.member.hasPermission("BAN_MEMBERS")) {
-      permissions.push("Ban Members");
-    }
-
-    if (message.member.hasPermission("ADMINISTRATOR")) {
-      permissions.push("Administrator");
-    }
-
-    if (message.member.hasPermission("MANAGE_MESSAGES")) {
-      permissions.push("Manage Messages");
-    }
-
-    if (message.member.hasPermission("MANAGE_CHANNELS")) {
-      permissions.push("Manage Channels");
-    }
-    if (message.member.hasPermission("MANAGE_GUILD")) {
-      permissions.push("Manage Guild");
-    }
-    if (message.member.hasPermission("VIEW_AUDIT_LOG")) {
-      permissions.push("View Audit Log");
-    }
-
-    if (message.member.hasPermission("MENTION_EVERYONE")) {
-      permissions.push("Mention Everyone");
-    }
-
-    if (message.member.hasPermission("MANAGE_NICKNAMES")) {
-      permissions.push("Manage Nicknames");
-    }
-
-    if (message.member.hasPermission("MANAGE_ROLES")) {
-      permissions.push("Manage Roles");
-    }
-
-    if (message.member.hasPermission("MANAGE_WEBHOOKS")) {
-      permissions.push("Manage Webhooks");
-    }
-
-    if (message.member.hasPermission("MANAGE_EMOJIS")) {
-      permissions.push("Manage Emojis");
-    }
-
-    if (permissions.length == 0) {
-      permissions.push("No Key Permissions Found");
-    }
-
-    if (user.user.id == message.guild.ownerID) {
-      acknowledgements = "Server Owner";
-    }
 
     //if (user.presence.status === "idle") user.presence.status = "Idle";
     //if (user.presence.status === "offline") user.presence.status = "Offline";
@@ -160,13 +104,10 @@ module.exports = {
       .setFooter(user.user.presence.status, stat[user.user.presence.status]);
     embed
       .addField("❯ Roles", `<@&${user._roles.join("> <@&")}>`)
-      .addField("❯ Permissions", `${permissions.join(", ")}`, true)
-      .addField("❯ Acknowledgements ", `${acknowledgements}`, true);
-
     embed.setTimestamp();
 
     return message.channel.send(embed).catch(err => {
-      return message.channel.send("Error : " + err);
+      return console.log("User_Info_Error : " + err);
     });
   }
 };
