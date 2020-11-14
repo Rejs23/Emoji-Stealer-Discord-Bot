@@ -24,5 +24,6 @@ run: async (bot, message, args) => {
     message.channel
       .bulkDelete(deleteAmount, true)
       .catch(err => message.reply("something went wrong…" + err));
+      console.log(`> ${message.author.tag}_USE_CLEAR_COMMANDS`)
   }
 }

@@ -105,7 +105,8 @@ module.exports = {
     embed
       .addField("❯ Roles", `<@&${user._roles.join("> <@&")}>`)
     embed.setTimestamp();
-
+    
+    console.log(`> ${message.author.tag}_USE_USER_COMMANDS`)
     return message.channel.send(embed).catch(err => {
       return console.log("User_Info_Error : " + err);
     });

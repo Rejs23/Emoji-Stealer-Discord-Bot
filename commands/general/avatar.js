@@ -6,7 +6,7 @@ module.exports = {
   usage: "avatar <mention user>",
   aliases: ["av"],
   description: "Show user avatar",
-  run: async (bot, message, args,) => {
+  run: async (bot, message, args) => {
     let userArray = message.content.split(" ");
     let userArgs = userArray.slice(1);
     let member =
@@ -23,12 +23,12 @@ module.exports = {
     let avGede = member.user.displayAvatarURL({ format: "png", dynamic: true, size: 256 })
 
     const avatarEmbed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
       .setTitle("Avatar")
       .setFooter(`Thanks for using ${bot.user.username}`)
       .setAuthor(tag, av)
       .setImage(avGede);
     message.channel.send(avatarEmbed);
-    message.delete({ timeout: 15000 }); //angkanya bebas
+    console.log(`> ${message.author.tag}_USE_AVATAR_COMMANDS`)
   }
 };

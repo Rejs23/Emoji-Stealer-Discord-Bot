@@ -27,9 +27,10 @@ module.exports = {
       .addFields({name : "❯ Command's Usage", value: "`" + `${command.usage || "Not provided"}` + "`", inline: true})
       .addFields({name : "❯ Command's Aliases", value: "`" + `${command.aliases ||"No provided"}` + "`", inline: true})
         .setThumbnail(message.guild.iconURL({ format: "png", dynamic: true }))
-        .setColor("RANDOM")
+        .setColor("BLUE")
         .setFooter(bot.user.username, bot.user.displayAvatarURL());
 
+      console.log(`> ${message.author.tag}_USE_HELP_COMMANDS`)
       return message.channel.send(embed);
     } else {
       const commands = await bot.commands;
@@ -39,7 +40,7 @@ module.exports = {
         .setDescription("Global prefix is `/`" + `\nServer prefix is ${prefix || "None"} `)
         .addFields({name : "Support Server", value: "`Coming Soon`", inline : true})
         .addFields({name : "Help Command Usage", value: "`help [name command or module]`", inline : true})
-        .setColor("RANDOM")
+        .setColor("BLUE")
         .setFooter(
         `Don't include <> or [], it's mean <> is required and [] is optional`,
         "https://media.discordapp.net/attachments/739051913651159071/750732937166848080/12-125584_computer-icons-information-angle-logo-brand-nfl-atlanta-removebg-preview_1.png?width=374&height=391"
@@ -75,7 +76,7 @@ module.exports = {
 
         emx.addField("Custom Commands", array.join(", "))
       }
-
+      console.log(`> ${message.author.tag}_USE_HELP_COMMANDS`)
       return message.channel.send(emx);
     }
   }

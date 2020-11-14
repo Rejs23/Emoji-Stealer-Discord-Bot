@@ -13,5 +13,6 @@ run: async (bot, message, args) => {
     if (!text) return message.reply("Please give me some text to say! :)");
     message.delete();
     message.channel.send(text);
+    console.log(`> ${message.author.tag}_USE_SAY_COMMANDS`)
   }
 }

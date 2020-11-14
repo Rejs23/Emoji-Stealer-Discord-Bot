@@ -18,5 +18,6 @@ run: async (bot, message, args) => {
     .setTimestamp();
     message.delete();
     message.channel.send(sayEmbed);
+    console.log(`> ${message.author.tag}_USE_SAY_EMBED_COMMANDS`)
   }
 }

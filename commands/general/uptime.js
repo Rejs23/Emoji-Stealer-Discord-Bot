@@ -11,7 +11,7 @@ module.exports = {
       .duration(bot.uptime)
       .format("d[ days], h[ hours], m[ minutes, and ]s[ seconds]");
     const uptimeEmbed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
       .setAuthor(
         `${bot.user.username}'s uptime`,
         bot.user.displayAvatarURL({ format: "png", dynamic: true })
@@ -23,5 +23,6 @@ module.exports = {
       )
       .setTimestamp();
     message.channel.send(uptimeEmbed);
+    console.log(`> ${message.author.tag}_USE_UPTIME_COMMANDS`)
   }
 };

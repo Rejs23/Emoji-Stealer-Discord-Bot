@@ -13,7 +13,7 @@ module.exports = {
     //PERMISSION
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(
-        "You are not allowed or do not have permission to change prefix"
+        "You are not allowed or do not have permission to change prefix\nYou must have permission \`ADMINISTRATOR\`"
       );
     }
 
@@ -35,10 +35,12 @@ module.exports = {
 
     if (args.join("") === default_prefix) {
       db.delete(`prefix_${message.guild.id}`);
+      console.log(`> ${message.author.tag}_USE_CUSTOM_PREFIX_COMMANDS`)
       return await message.channel.send("Reseted Prefix ✅");
     }
 
     db.set(`prefix_${message.guild.id}`, args[0]);
+    console.log(`> ${message.author.tag}_USE_CUSTOM_PREFIX_COMMANDS`)
     await message.channel.send(`Seted Bot Prefix to ${args[0]}`);
   }
 };

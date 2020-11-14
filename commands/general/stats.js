@@ -23,6 +23,10 @@ module.exports = {
 
     const statsembed = new discord.MessageEmbed()
       .setAuthor(namabot, avatar)
+      .addField(`Common Information`, `\`\`\`Bot Name      : ${bot.user.username}
+      Bot Tag       : ${bot,user.tag}
+      Bot Id        : ${bot.user.id}
+      Created At    : ${bot.user.createdAt}\`\`\``, true)
       .addFields({
         name: `Uptime`,
         value: "```" + uptime + "```",
@@ -57,5 +61,6 @@ CPU           : ${require("os").cpus()[0].model}` +
         inline: true
       });
     message.channel.send(statsembed);
+    console.log(`> ${message.author.tag}_USE_STATS_COMMANDS`)
   }
 };
